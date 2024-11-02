@@ -1,18 +1,19 @@
-/*=== MEDIA QUERY ===*/
-/*
-Theme Name: Medic
-Author: Themefisher
-Author URI: https://themefisher.com/
-Description: Medicle Template
-Version: 1.0.0
-
-*/
 @import url("https://fonts.googleapis.com/css?family=Exo:500,600,700|Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+.material-symbols-outlined {
+  color: crimson;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 48
+}
 html {
   overflow-x: hidden;
 }
 
 body {
+  scroll-behavior: smooth;
   line-height: 1.6;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -55,37 +56,50 @@ h6, .h6 {
 p {
   line-height: 30px;
 }
+table {
+  border: 2px royalblue;
+  border-collapse: collapse;
+}
 
 .navbar-toggle .icon-bar {
   background: #223a66;
 }
 
-input[type="email"], input[type="password"], input[type="text"], input[type="tel"] {
-  box-shadow: none;
-  height: 45px;
-  outline: none;
-  font-size: 14px;
-}
-
-input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus, input[type="tel"]:focus {
-  box-shadow: none;
-  border: 1px solid #223a66;
+#book{
+    position: relative;
+  width: 40%;
+  padding: 30px;
+  left: 30%;
+  top: 30%;
 }
 
 .form-control {
-  box-shadow: none;
-  border-radius: 0;
+  background: darkgoldenrod;
 }
-
-.form-control:focus {
-  box-shadow: none;
-  border: 1px solid #223a66;
+.back{
+  background: linear-gradient(cadetblue,grey,black);
+  width: 1700px;
 }
-
+.select{
+ position: relative;
+ left: 50%;
+ bottom: 55px;
+}
 .py-7 {
   padding: 7rem 0px;
 }
-
+.head{
+  background: #223a66;
+  color: aliceblue;
+  padding: 5px 2px; 
+  border-color: skyblue;
+  border-width: 5px;
+  width: 40%;
+  left :33%;
+  right: 30%;
+  position: relative;
+  vertical-align: middle;
+}
 .btn {
   display: inline-block;
   font-size: 14px;
@@ -111,9 +125,9 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 .btn-main {
-  background: #223a66;
+  background: #e12454;
   color: #fff;
-  border-color: #223a66;
+  border-color: skyblue;
 }
 
 .btn-main:hover {
@@ -123,9 +137,10 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 .btn-main-2 {
-  background: #e12454;
+  background: #223a66;
   color: #fff;
-  border-color: #e12454;
+  border-color: skyblue;
+  border-width: 5px;
 }
 
 .btn-main-2:hover {
@@ -169,6 +184,13 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
   background: #fff;
   border-color: #fff;
   color: #222;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
 
 .btn-white:hover {
@@ -273,6 +295,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 
 .text-sm {
   font-size: 14px;
+  color: palevioletred;
 }
 
 .text-md {
@@ -377,16 +400,31 @@ a:focus {
 #navbarmain {
   padding: 20px 0px;
 }
-
+#display1
+{
+  display: none;
+}
+#display1 ::after
+{
+  display: flex;
+  width: 50%;
+  padding: 0px 0px 12px 24px;
+  background: whitesmoke;
+}
 #navbarmain .nav-link {
   font-weight: 600;
   padding: 10px 15px;
-  color: #222;
+  color: black;
   font-family: "Exo", sans-serif;
-  text-transform: capitalize;
-  font-size: 16px;
+  /*text-transform: capitalize;*/
+  font-size: 18px;
   transition: all .25s ease;
+  border-radius: 100%;
 }
+.nav-link:hover{
+  background: lightskyblue;
+  color: darkred;
+  }
 
 .dropdown-toggle::after {
   display: none;
@@ -394,6 +432,13 @@ a:focus {
 
 .navbar-brand {
   margin-top: 10px;
+}
+.navlink1{
+  /*text-transform: capitalize;*/
+  position: relative;
+  padding: 20px 0 0 0;
+  border-radius: 50%;
+  background-color: lightskyblue;
 }
 
 .dropdown .dropdown-menu {
@@ -465,9 +510,9 @@ a:focus {
   position: relative;
   overflow: hidden;
   background: #fff;
-  background: url("../images/bg/slider-bg-1.jpg") no-repeat;
+  background: url("../images/gp3.jpeg") no-repeat;
   background-size: cover;
-  min-height: 550px;
+  min-height: 150px;
 }
 
 .banner .block {
@@ -551,6 +596,12 @@ a:focus {
   justify-content: center;
   background: #eff0f3;
 }
+.order{
+  position: relative;
+    left: 20%;
+    right: 10%;
+    position: relative;
+}
 
 .appoinment-content {
   position: relative;
@@ -583,11 +634,10 @@ a:focus {
 }
 
 .appoinment-form .form-control {
-  background: #f4f9fc;
-  height: 55px;
-  border-color: rgba(0, 0, 0, 0.05);
+  background: cornsilk;
+  height: 50px;
+  width: 100%;
 }
-
 .appoinment-form textarea.form-control {
   height: auto;
 }
@@ -664,7 +714,7 @@ a:focus {
 }
 
 .service {
-  padding-top: 180px;
+  padding-top: 10px;
 }
 
 .service .service-item {
@@ -731,7 +781,7 @@ a:focus {
   color: #fff;
 }
 
-.doctors .btn-group .btn.focus {
+.doctors .btn-group .btn focus {
   box-shadow: none !important;
   border-color: transparent;
 }
@@ -852,7 +902,7 @@ a:focus {
 }
 
 .cta-page {
-  background: url("../images/bg/banner.jpg") no-repeat;
+  background: url("../images/service/HealthyLungs.jpg") no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -989,11 +1039,11 @@ a:focus {
   background: #f4f9fc;
 }
 
-.contact-form-wrap .form-group-2 {
+.contact-form-wrap {
   margin-bottom: 13px;
 }
 
-.contact-form-wrap .form-group-2 textarea {
+.contact-form-wrap .textarea {
   height: auto;
   border: 1px solid #EEF2F6;
   box-shadow: none;
@@ -1397,7 +1447,7 @@ a:focus {
 }
 
 .widget .divider {
-  height: 3px;
+  height: 2px;
 }
 
 .widget h4 {
@@ -1428,11 +1478,10 @@ a:focus {
 .footer-socials li a {
   width: 45px;
   height: 45px;
-  background: #6F8BA4;
-  color: #fff;
+  color: black;
   display: inline-block;
   text-align: center;
-  border-radius: 100%;
+  border-radius: 100% ;
   padding-top: 12px;
 }
 
@@ -1489,5 +1538,61 @@ a:focus {
   cursor: pointer;
   opacity: 1;
 }
+/**
+  * Combine 2
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@-webkit-keyframes combine-two {
+  25% {
+    -webkit-transform: translate(0, -100%);
+            transform: translate(0, -100%); }
+  50% {
+    -webkit-transform: translate(0, 50%);
+            transform: translate(0, 50%); }
+  75% {
+    -webkit-transform: translate(0, 150%);
+            transform: translate(0, 150%); } }
+@keyframes combine-two {
+  25% {
+    -webkit-transform: translate(0, -100%);
+            transform: translate(0, -100%); }
+  50% {
+    -webkit-transform: translate(0, 50%);
+            transform: translate(0, 50%); }
+  75% {
+    -webkit-transform: translate(0, 150%);
+            transform: translate(0, 150%); } }
 
-/*# sourceMappingURL=maps/style.css.map */
+#combine-two {
+  height: 30px;
+  position: absolute;
+  width: 30px;
+  
+ }  
+  #combine-two div {
+    --rotation: 45;
+    position: absolute;
+    -webkit-transform: rotate(calc(var(--rotation) * 1deg));
+            transform: rotate(calc(var(--rotation) * 1deg)); }
+    #combine-two div:after {
+      -webkit-animation: combine-two 1.5s infinite ease;
+              animation: combine-two 1.5s infinite ease;
+      border: 15px solid transparent;
+      border-top-color: var(--primary);
+      content: '';
+      display:block;
+      height: 30px;
+      width: 30px; 
+    }
+    #combine-two div:nth-child(2) {
+      --rotation: 135; }
+    #combine-two div:nth-child(3) {
+      --rotation: 225; }
+    #combine-two div:nth-child(4) {
+      --rotation: 315; }/* Add animation to "page content" */
+   .slider{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+   }

@@ -1,0 +1,117 @@
+body{
+	font-family: serif,sans-serif,;
+	background: transparent;
+}
+form{
+	position: relative;
+	background: linear-gradient(lightskyblue,skyblue,lightskyblue);
+	width: 40%;
+	padding: 50px;
+	left: 30%;
+	top: 30%;
+	
+	/*border: 2px solid darkcyan;*/	
+	border-radius: 7%;
+	/*filter: drop-shadow(1px 1px 40px deepskyblue);*/
+	box-shadow: 1px 1px 50px deepskyblue;
+	margin-bottom: 100px;
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+	@media print{
+	*{
+		display: none;
+	}
+}
+h2{
+	font-family: Comic Sans MS, Comic Sans;
+	text-align: center;
+}
+#print{
+	display: block;
+}
+
+#l1{
+	font-family: Comic Sans MS, Comic Sans;
+	color: darkblue;
+}
+button{
+	position: relative;
+	font-family: Comic Sans MS, Comic Sans;
+	color: white;
+	background: royalblue;
+	left: 30%;
+	width: 30%;
+	height: 30px;
+ transition: .2s all linear;
+ flex: 1 0 40px;
+ border: none;
+ outline: none;
+ border-radius: 20px;
+ margin-top: 30px;
+}
+button:hover{
+  position: relative;
+  box-shadow: 1px 1px 10px white;
+  background:skyblue;
+	color: darkblue;
+}
+button:focus{
+	position: relative;
+	background:skyblue;
+
+}
+form .p1{
+	position: relative;
+	color: darkblue;
+	margin-left: 30px;
+	margin-top: -40px;
+}
+form .p2{
+	position: relative;
+	color: darkblue;
+	margin-left: 30px;
+	margin-bottom: 30px;
+}form .p3{
+	position: relative;
+	color: darkblue;
+	margin-left: 30px;
+	margin-top: 40px;
+}
+form a{
+animation: .5s blink linear;
+position: relative;
+animation-iteration-count: infinite;
+
+}
+@keyframes blink {
+	0%{color:crimson;}
+	100%{color: yellow;}
+}
+form a:hover{
+	animation-iteration-count:initial;
+   
+}
+label{
+	position: relative;
+	left: 1em;
+}
+input[type="email"], input[type="password"], input[type="text"], input[type="tel"]{
+	position: relative;
+	background: transparent;
+	height: 50px;
+	width: 70%;
+	border: 1.5px solid darkblue;
+	border-radius: 20px;
+	transition: .2s all linear;
+  flex: 1 0 140px;
+}
+input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus, input[type="tel"]:focus{
+	position: relative; 
+	width: 100%;
+	box-shadow: 1px 1px 20px white;
+	border-radius: 20px;
+	height: 60px;
+}

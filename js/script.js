@@ -1,6 +1,17 @@
+var myVar;
 
+function myFunction() {
+  myVar = setTimeout(showPage, 1000);
+}
 
+function showPage() {
+  document.getElementById("combine-two").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
 
+function welcome(){
+	window.open("confirmation.html");
+}
 ;(function ($) {
 
 	'use strict';

@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="zxx">
+<html>
 <head>
+	 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="description" content="Orbitor,business,company,agency,modern,bootstrap4,tech,software">
   <meta name="author" content="themefisher.com">
 
   <title>Guru Krupa Enterprises</title>
 
-  <!-- Favicon -->
+  <!-- Favicon --><script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
 
   <!-- bootstrap.min css -->
@@ -20,12 +20,8 @@
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-
-</head>
-
-<body onload="myFunction()" style="margin: 0;" id="top">
-	<div id="loader"></div>
-<div style="display:none;" id="myDiv" class="animate-bottom">
+	</head>
+<body>
 <header>
 	<div class="header-top-bar">
 		<div class="container">
@@ -33,7 +29,7 @@
 				<div class="col-lg-6">
 					<ul class="top-bar-info list-inline-item pl-0 mb-0">
 						<li class="list-inline-item"><a href="mailto:akshaysg83@gmail.com"><i class="icofont-support-faq mr-2"></i>akshaysg83@gmail.com</a></li>
-						<li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>Vidhya nagara 2 <sup>ND</sup> Bus Stop, davanagere</li>
+						<li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>Location : Vidhyanagara 2<sup>nd</sup> Bus Stop, Davanagere	 </li>
 					</ul>
 				</div>
 				<div class="col-lg-6">
@@ -51,7 +47,7 @@
 		<div class="container">
 		 	 <a class="navbar-brand" href="index.html">
 			  	<img src="images/lungs.jpg" alt="" class="img-fluid">
-			  	<img src="images/gp.jpeg" alt="logo" class="img-fluid" width="60%">
+			  	<img src="images/gp.jpeg" alt="logo" class="img-fluid" width="60%"> 
 			  </a>
 
 		  	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain" aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,17 +57,14 @@
 		  <div class="collapse navbar-collapse" id="navbarmain">
 			<ul class="navbar-nav ml-auto">
 			  <li class="nav-item active">
+			  	<li class="nav-item"><a class="btn btn-main-2 btn-icon btn-round-full" href="Rent.html">Book Now</a></li>
 				<a class="nav-link" href="index.html">Home</a>
 			  </li>
-			   <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-			    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
 
-			    <li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="department.html" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Department <i class="icofont-thin-down"></i></a>
-					<ul class="dropdown-menu" aria-labelledby="dropdown02">
-						<li><a class="dropdown-item" href="department.html">Departments</a></li>
-						<li><a class="dropdown-item" href="department-single.html">Department Single</a></li>
-					</ul>
+
+
+			 
+					
 			  	</li>
 
 			
@@ -81,24 +74,90 @@
 		</div>
 	</nav>
 </header>
-	
-
-
-
 <section class="section confirmation">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
           <div class="confirmation-content text-center">
             <i class="icofont-check-circled text-lg text-color-2"></i>
-              <h2 class="mt-3 mb-4">Thank you for your Order</h2>
-              <p>We will contact with you soon.</p>
-          </div>
+              <h2 class="mt-3 mb-4">your Orders</h2>
+                       </div>
       </div>
     </div>
   </div>
 </section>
-<!-- footer Start -->
+
+<!--
+	<!?php
+	if(($_SERVER['REQUEST_METHOD'])=="POST")
+	{
+		$name=$_REQUEST['cname'];
+	    $phno=$_REQUEST['cmob'];
+	    $email=$_REQUEST['cEmail'];
+		
+		$product=$_REQUEST['cprod'];
+		$types=$_REQUEST['type'];
+
+	
+
+	}	
+	?>
+	<div id="print">
+	<h2 align="center" style="color: steelblue;" >Bill</h2>
+
+	<table align="center" class="table col-lg-9">
+
+		<tr class="trow">
+			<th>Name</th>
+			<td><!?php echo $name;?></td>
+		</tr>
+		<tr>
+			<th>Contact number</th>
+			<td><!?php echo $phno;?></td>
+		</tr>
+		<tr>
+			<th>Email</th>
+<td><!?php echo $email;?></td>
+</tr>
+<tr>
+			<th>Product</th>
+<td><!?php echo $product;?></td>
+</tr>
+<tr>
+			<th>Type</th>
+<td><!?php echo $types;?></td>
+
+		</tr>
+
+
+	</table>
+	  <iframe name="print_frame" width="0" height="0" frameborder="0" src="about:blank"></iframe>
+	</div>
+	<button onclick="handlePrint()">print</button>
+	 <script type="text/javascript">
+         function handlePrint() {
+               window.frames["print_frame"].document.body.innerHTML = document.getElementById('print').innerHTML;
+               window.frames["print_frame"].window.focus();
+               window.frames["print_frame"].window.print();
+         }
+      </script>
+
+
+
+	<!?php
+	$servername="localhost";
+	$username="root";
+	$password="";
+	$database="order";
+	$conn=mysqli_connect($servername,$username,$password,$database);
+    $sql="INSERT INTO `book`(`name`,`phno`,`type`,`product`,`email`)VALUES('$name',$phno,'$types','$product','$email')";
+    $result=mysqli_query($conn,$sql);
+if($result){
+	echo " your record is saved";
+}
+	?>
+	-->
+	<!-- footer Start -->
 <footer class="footer section gray-bg">
 	<div class="container">
 		<div class="row">
@@ -200,33 +259,5 @@
 		</div>
 	</div>
 </footer>
-
-   
-
-    <!-- 
-    Essential Scripts
-    =====================================-->
-
-    
-    <!-- Main jQuery -->
-    <script src="plugins/jquery/jquery.js"></script>
-    <!-- Bootstrap 4.3.2 -->
-    <script src="plugins/bootstrap/js/popper.js"></script>
-    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="plugins/counterup/jquery.easing.js"></script>
-    <!-- Slick Slider -->
-    <script src="plugins/slick-carousel/slick/slick.min.js"></script>
-    <!-- Counterup -->
-    <script src="plugins/counterup/jquery.waypoints.min.js"></script>
-    
-    <script src="plugins/shuffle/shuffle.min.js"></script>
-    <script src="plugins/counterup/jquery.counterup.min.js"></script>
-    <!-- Google Map -->
-    <script src="plugins/google-map/map.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
-    
-    <script src="js/script.js"></script>
-    <script src="js/contact.js"></script>
-</div>
-  </body>
-  </html>
+	</body>
+</html>

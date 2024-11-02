@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
+	 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="description" content="Orbitor,business,company,agency,modern,bootstrap4,tech,software">
   <meta name="author" content="themefisher.com">
@@ -20,11 +21,11 @@
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-
-</head>
-
-<body onload="myFunction()" style="margin: 0;" id="top">
+		<link rel="stylesheet"  href="css/order.css">
+	</head>
+	<body onload="myFunction()" style="margin: 0;" id="top">
 	<div id="loader"></div>
+	
 <div style="display:none;" id="myDiv" class="animate-bottom">
 <header>
 	<div class="header-top-bar">
@@ -33,7 +34,7 @@
 				<div class="col-lg-6">
 					<ul class="top-bar-info list-inline-item pl-0 mb-0">
 						<li class="list-inline-item"><a href="mailto:akshaysg83@gmail.com"><i class="icofont-support-faq mr-2"></i>akshaysg83@gmail.com</a></li>
-						<li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>Vidhya nagara 2 <sup>ND</sup> Bus Stop, davanagere</li>
+						<li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>Location : Vidhyanagara 2<sup>nd</sup> Bus Stop, Davanagere	 </li>
 					</ul>
 				</div>
 				<div class="col-lg-6">
@@ -51,7 +52,7 @@
 		<div class="container">
 		 	 <a class="navbar-brand" href="index.html">
 			  	<img src="images/lungs.jpg" alt="" class="img-fluid">
-			  	<img src="images/gp.jpeg" alt="logo" class="img-fluid" width="60%">
+			  	<img src="images/gp.jpeg" alt="logo" class="img-fluid" width="60%"> 
 			  </a>
 
 		  	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain" aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,43 +62,44 @@
 		  <div class="collapse navbar-collapse" id="navbarmain">
 			<ul class="navbar-nav ml-auto">
 			  <li class="nav-item active">
+			  	<li class="nav-item"><a class="btn btn-main-2 btn-icon btn-round-full" href="login.html">Login</a></li>
 				<a class="nav-link" href="index.html">Home</a>
 			  </li>
-			   <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-			    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
 
-			    <li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="department.html" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Department <i class="icofont-thin-down"></i></a>
-					<ul class="dropdown-menu" aria-labelledby="dropdown02">
-						<li><a class="dropdown-item" href="department.html">Departments</a></li>
-						<li><a class="dropdown-item" href="department-single.html">Department Single</a></li>
-					</ul>
 			  	</li>
 
-			
+			 
 			   <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 			</ul>
 		  </div>
 		</div>
 	</nav>
 </header>
-	
+	<form method="post" action="demo.php">
+		<h2>Sign In</h2><br>
+		<div id="l1">
+		<b>Your Name : </b><br>
+		<input type="text" name="name" id="name" placeholder="Enter Your Name" required /><br><br>
+		</div>
+		<div id="l1">
+		<b>Your Mobile Number : </b><br>
+		<input type="tel" name="Mobile" id="Mobile" placeholder="Enter only numbers" pattern="[0-9]{10}" required /><br><br>
+	    </div>
+	    <div id="l1">
+	    <span style="color:red;">*</span><b>Your Email Address: </b><br>
+	    <input type="email" name="Email" id="Email" placeholder="Enter Email " required /><br><br>
+	    </div>
+	    <div id="l1">
+	   <b>Your Permanent Address</b><br>
+	   <input type="text" name="add" id="add" placeholder="enter Permanent address" required>
+	</div><br>
+	<div id="l1">
+	    <input type="submit" id="log" value="Sign in" />
+	</div>
+</div>
+</form>
+</div>
 
-
-
-<section class="section confirmation">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-          <div class="confirmation-content text-center">
-            <i class="icofont-check-circled text-lg text-color-2"></i>
-              <h2 class="mt-3 mb-4">Thank you for your Order</h2>
-              <p>We will contact with you soon.</p>
-          </div>
-      </div>
-    </div>
-  </div>
-</section>
 <!-- footer Start -->
 <footer class="footer section gray-bg">
 	<div class="container">
@@ -180,14 +182,7 @@
 						</span>Designed by <a href="https://VBANGINFOSOL.COM/" target="_blank">VBANG INFO SOLUTIONS</a>
 					</div>
 				</div>
-				<div class="col-lg-6">
-					<div class="subscribe-form text-lg-right mt-5 mt-lg-0">
-						<form action="#" class="subscribe">
-							<input type="text" class="form-control" placeholder="Your Email address">
-							<a href="#" class="btn btn-main-2 btn-round-full">Subscribe</a>
-						</form>
-					</div>
-				</div>
+				
 			</div>
 
 			<div class="row">
@@ -207,7 +202,6 @@
     Essential Scripts
     =====================================-->
 
-    
     <!-- Main jQuery -->
     <script src="plugins/jquery/jquery.js"></script>
     <!-- Bootstrap 4.3.2 -->
@@ -227,6 +221,6 @@
     
     <script src="js/script.js"></script>
     <script src="js/contact.js"></script>
-</div>
+
   </body>
   </html>
